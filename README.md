@@ -40,7 +40,7 @@ DB_USER=seu_usuario
 DB_PASSWORD=sua_senha
 DB_NAME=seu_banco_de_dados
 DB_PORT=5432
-PORT=3002
+PORT=5010
 ```
 
 ### 5. Executar a API
@@ -51,12 +51,30 @@ Para iniciar o servidor em modo de desenvolvimento:
 npm run dev
 ```
 
-O servidor estará rodando em `http://localhost:3002` (ou na porta que você definiu no `.env`).
+O servidor estará rodando em `http://localhost:5010` (ou na porta que você definiu no `.env`).
 
-### 6. Documentação (Swagger)
+### 6. Executar com PM2 (Produção)
+
+Para manter a API rodando em segundo plano e reiniciar automaticamente em caso de falhas:
+
+```bash
+# Instalar PM2 globalmente (se não tiver)
+npm install pm2 -g
+
+# Iniciar a API
+pm2 start src/server.js --name api-transcleber
+
+# Comandos úteis do PM2:
+pm2 status          # Ver status dos processos
+pm2 logs            # Ver logs em tempo real
+pm2 restart all     # Reiniciar a API
+pm2 stop all        # Parar a API
+```
+
+### 7. Documentação (Swagger)
 
 A documentação interativa da API estará disponível em:
-`http://localhost:3002/api-docs`
+`http://localhost:5010/api-docs`
 
 ---
 
