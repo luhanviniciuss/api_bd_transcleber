@@ -74,7 +74,8 @@ pm2 stop all        # Parar a API
 ### 7. Documentação (Swagger)
 
 A documentação interativa da API estará disponível em:
-`http://localhost:5010/api-docs`
+- Local: `http://localhost:5010/api-docs`
+- VPS: `http://192.168.10.10:5010/api-docs`
 
 ---
 
