@@ -7,7 +7,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 
 const app = express();
-const PORT = 3002;
+const PORT = process.env.PORT || 5010;
 
 // Configurao do Swagger
 const swaggerOptions = {
@@ -20,11 +20,11 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:3002',
+        url: `http://localhost:${PORT}`,
         description: 'Servidor Local',
       },
       {
-        url: `http://192.168.12.137:3002`,
+        url: `http://192.168.12.137:${PORT}`,
         description: 'Servidor de Rede',
       }
     ],
