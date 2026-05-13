@@ -20,12 +20,12 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${PORT}`,
-        description: 'Servidor Local',
+        url: `http://192.168.10.10:${PORT}`,
+        description: 'Servidor VPS',
       },
       {
-        url: `http://192.168.12.137:${PORT}`,
-        description: 'Servidor de Rede',
+        url: `http://localhost:${PORT}`,
+        description: 'Servidor Local',
       }
     ],
   },
